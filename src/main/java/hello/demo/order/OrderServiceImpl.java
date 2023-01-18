@@ -1,5 +1,6 @@
 package hello.demo.order;
 
+import hello.demo.annotation.MainDiscountPolicy;
 import hello.demo.discount.DiscountPolicy;
 import hello.demo.discount.FixDiscountPolicy;
 import hello.demo.member.Member;
@@ -15,7 +16,7 @@ public class OrderServiceImpl implements OrderService{
     private final DiscountPolicy discountPolicy;
 
     @Autowired
-    public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
+    public OrderServiceImpl(MemberRepository memberRepository, @MainDiscountPolicy DiscountPolicy discountPolicy) {
         this.memberRepository = memberRepository;
         this.discountPolicy = discountPolicy;
     }
