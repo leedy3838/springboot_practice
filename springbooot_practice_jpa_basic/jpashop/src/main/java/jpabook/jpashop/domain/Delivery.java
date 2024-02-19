@@ -10,7 +10,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-public class Delivery {
+public class Delivery extends BaseEntity {
 
     @Id @GeneratedValue
     private Long id;

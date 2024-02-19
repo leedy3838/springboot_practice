@@ -15,7 +15,7 @@ import java.util.List;
 @Setter
 @Table(name = "orders")
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-public class Order {
+public class Order extends BaseEntity {
 
     @Id @GeneratedValue
     @Column(name = "order_id")
