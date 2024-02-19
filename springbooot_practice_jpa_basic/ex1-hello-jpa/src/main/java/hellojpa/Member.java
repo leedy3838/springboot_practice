@@ -3,6 +3,9 @@ package hellojpa;
 
 import jakarta.persistence.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Entity
 public class Member {
 
@@ -13,9 +16,6 @@ public class Member {
     @Column(name = "username")
     private String username;
 
-//    @Column(name = "team_id")
-//    private Long teamId;
-
     @ManyToOne
     @JoinColumn(name = "team_id", insertable = false, updatable = false)
     private Team team;
@@ -23,6 +23,9 @@ public class Member {
     @OneToOne
     @JoinColumn(name = "locker_id")
     private Locker locker;
+
+    @OneToMany(mappedBy = "product")
+    private List<MemberProduct> memberProducts = new ArrayList<>();
 
     public Long getId() {
         return id;
