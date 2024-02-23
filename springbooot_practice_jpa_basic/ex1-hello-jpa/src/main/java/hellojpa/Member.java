@@ -3,8 +3,6 @@ package hellojpa;
 
 import jakarta.persistence.*;
 
-import java.time.LocalDateTime;
-
 @Entity
 public class Member extends BaseEntity {
 
@@ -17,10 +15,10 @@ public class Member extends BaseEntity {
 
     //기간
     @Embedded
-    private Address homeAddress;
+    private Period workAddress;
 
     //주소
     @Embedded
-    private Period wordPeriod;
+    private Address homeAddress;
 
 }

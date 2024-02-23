@@ -2,30 +2,28 @@ package hellojpa;
 
 import jakarta.persistence.Embeddable;
 
-import java.time.LocalDateTime;
-
 @Embeddable
 public class Address {
 
-    private LocalDateTime startDate;
-    private LocalDateTime endDate;
+    private String city;
+    private String street;
+    private String zipcode;
 
     public Address() {
     }
 
-    public LocalDateTime getStartDate() {
-        return startDate;
+    public String getCity() {
+        return city;
     }
 
-    public void setStartDate(LocalDateTime startDate) {
-        this.startDate = startDate;
+
+    public String getStreet() {
+        return street;
     }
 
-    public LocalDateTime getEndDate() {
-        return endDate;
+
+    public String getZipcode() {
+        return zipcode;
     }
 
-    public void setEndDate(LocalDateTime endDate) {
-        this.endDate = endDate;
-    }
 }
